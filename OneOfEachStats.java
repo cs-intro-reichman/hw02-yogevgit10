@@ -59,7 +59,11 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 2 children: " + family2);
         System.out.println("Number of families with 3 children: " + family3);
 		System.out.println("Number of families with 4 or more children: " + family4ormore);
-        System.out.println("The most common number of children is " + Math.max(Math.max(family2, family3),family4ormore));
+        if (Math.max(Math.max(family2, family3),family4ormore)==family2)
+             System.out.println("The most common number of children is 2.");
+        else if (Math.max(Math.max(family2, family3),family4ormore)==family3)
+		     System.out.println("The most common number of children is 3.");
+        else System.out.println("The most common number of children is 4 or more.");
         //System.out.println("You made it... and you now have " + (girls + boys) + " children");   
 	}
 }
